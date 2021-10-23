@@ -21,7 +21,7 @@ local menu3 = MenuV:CreateMenu('MY CITY MENU', 'Prop Emotes', 'topleft', 255, 0,
 local menu_button1 = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Start a Dance Party' })
 
 -- MENU 1 (EMOTES MENU)
-local menu_button1 = menu1:AddButton({ icon = '🕺', label = 'Dance Emotes', value = menu2, description = 'Dance Emotes' })
+local menu1_button1 = menu1:AddButton({ icon = '🕺', label = 'Dance Emotes', value = menu2, description = 'Dance Emotes' })
 local menu_button2 = menu1:AddButton({ icon = '📦', label = 'Prop Emotes', value = menu3, description = 'Prop Emotes' })
 
 -- MENU 2 (DANCE EMOTES)
