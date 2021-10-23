@@ -69,7 +69,7 @@ menu2:On('open', function(m)
     }
 
     for k,v in ipairs(elements) do
-        local menu1_button1 = menu7:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
+        local menu1_button1 = menu2:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
             local selection = btn.Value
             ExecuteCommand(selection.value)
         end})
@@ -132,7 +132,7 @@ menu3:On('open', function(m)
     }
 
         for k,v in ipairs(elements) do
-            local menu1_button2 = menu8:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
+            local menu1_button2 = menu3:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
                 local selection = btn.Value
                 ExecuteCommand(selection.value)
             end})
