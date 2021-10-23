@@ -14,7 +14,7 @@
 -- CREATE MENU (MAIN MENU)
 local menu = MenuV:CreateMenu('MY CITY MENU', 'MY CITY MENU', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Main Menu')
 local menu1 = MenuV:CreateMenu('MY CITY MENU', "Emotes Menu", 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Emotes Menu')
-local menu2 = MenuV:CreateMenu('MY CITY MENU', 'Dance Emotes', 'topleft', 255, 0, 0,, 'size-125', 'default', 'menuv', 'Dance Emotes')
+local menu2 = MenuV:CreateMenu('MY CITY MENU', 'Dance Emotes', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Dance Emotes')
 local menu3 = MenuV:CreateMenu('MY CITY MENU', 'Prop Emotes', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Prop Emotes')
 
 -- PRINCIPAL MENU (MAIN MENU BUTTONS)
