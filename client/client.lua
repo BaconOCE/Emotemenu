@@ -18,11 +18,11 @@ local menu2 = MenuV:CreateMenu('MY CITY MENU', 'Dance Emotes', 'topleft', 255, 0
 local menu3 = MenuV:CreateMenu('MY CITY MENU', 'Prop Emotes', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Prop Emotes')
 
 -- PRINCIPAL MENU (MAIN MENU BUTTONS)
-local menu_button1 = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Start a Dance Party' })
+local menu_button = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Start a Dance Party' })
 
 -- MENU 1 (EMOTES MENU)
-local menu1_button1 = menu3:AddButton({ icon = '🕺', label = 'Dance Emotes', value = menu2, description = 'Dance Emotes' })
-local menu1_button2 = menu3:AddButton({ icon = '📦', label = 'Prop Emotes', value = menu3, description = 'Prop Emotes' })
+local menu_button1 = menu1:AddButton({ icon = '🕺', label = 'Dance Emotes', value = menu2, description = 'Dance Emotes' })
+local menu_button2 = menu1:AddButton({ icon = '📦', label = 'Prop Emotes', value = menu3, description = 'Prop Emotes' })
 
 -- MENU 2 (DANCE EMOTES)
 menu2:On('open', function(m)
@@ -69,7 +69,7 @@ menu2:On('open', function(m)
     }
 
     for k,v in ipairs(elements) do
-        local menu1_button1 = menu7:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
+        local menu_button1 = menu2:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
             local selection = btn.Value
             ExecuteCommand(selection.value)
         end})
@@ -132,7 +132,7 @@ menu3:On('open', function(m)
     }
 
         for k,v in ipairs(elements) do
-            local menu1_button2 = menu8:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
+            local menu_button2 = menu3:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
                 local selection = btn.Value
                 ExecuteCommand(selection.value)
             end})
