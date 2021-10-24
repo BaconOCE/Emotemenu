@@ -19,7 +19,7 @@ local menu3 = MenuV:CreateMenu('MY CITY MENU', 'Prop Emotes', 'topleft', 255, 0,
 local menu4 = MenuV:CreateMenu('MY CITY MENU', 'Walk Styles', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Walk Styles')
 
 -- PRINCIPAL MENU (MAIN MENU BUTTONS)
-local menu_button1 = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Start a Dance Party' })
+local menu_button1 = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Dance Emotes & Prop Emotes' })
 local menu_button2 = menu:AddButton({ icon = '🚶‍♀️', label = 'Walking Styles', value = menu4, description = 'Pick a Walking Style' })
 
 -- MENU 1 (EMOTES MENU)
