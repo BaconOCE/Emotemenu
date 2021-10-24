@@ -20,7 +20,7 @@ local menu4 = MenuV:CreateMenu('MY CITY MENU', 'Walk Styles', 'topleft', 255, 0,
 
 -- PRINCIPAL MENU (MAIN MENU BUTTONS)
 local menu_button1 = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Start a Dance Party' })
-local menu_button2 = menu:AddButton({ icon = '🚶‍♀️', label = 'Walk Menu', value = menu4, description = 'Walk' })
+local menu_button2 = menu:AddButton({ icon = '🚶‍♀️', label = 'Walking Styles', value = menu4, description = 'Pick a Walking Style' })
 
 -- MENU 1 (EMOTES MENU)
 local menu_button1 = menu1:AddButton({ icon = '🕺', label = 'Dance Emotes', value = menu2, description = 'Dance Emotes' })
@@ -146,18 +146,18 @@ menu4:On('open', function(m)
     m:ClearItems()
     local elements = {
         [1] =   {label = 'Reset Walk', value = "walk reset", description = '/walk reset'},
-        [2] =   {label = 'Injured', value = "walk injured", description = '/walk brave'},
-        [3] =   {label = 'Alien', value = "walk alien", description = '/walk brave'},
-        [4] =   {label = 'Armored', value = "walk armored", description = '/walk brave'},
-        [5] =   {label = 'Arrogant', value = "walk arrogant", description = '/walk brave'},
+        [2] =   {label = 'Injured', value = "walk injured", description = '/walk injured'},
+        [3] =   {label = 'Alien', value = "walk alien", description = '/walk alien'},
+        [4] =   {label = 'Armored', value = "walk armored", description = '/walk armored'},
+        [5] =   {label = 'Arrogant', value = "walk arrogant", description = '/walk arrogant'},
         [6] =   {label = 'Brave', value = "walk brave", description = '/walk brave'},
-        [7] =   {label = 'Casual', value = "walk casual", description = '/walk brave'},
-        [8] =   {label = 'Casual2', value = "walk casual2", description = '/walk brave'},
-        [9] =   {label = 'Casual3', value = "walk casual3", description = '/walk brave'},
-        [10] =  {label = 'Casual4', value = "walk casual4", description = '/walk brave'},
-        [11] =  {label = 'Casual5', value = "walk casual5", description = '/walk brave'},
-        [12] =  {label = 'Casual6', value = "walk casual6", description = '/walk brave'},
-        [13] =  {label = 'Chichi', value = "walk Chichi", description = '/walk brave'},
+        [7] =   {label = 'Casual', value = "walk casual", description = '/walk casual'},
+        [8] =   {label = 'Casual2', value = "walk casual2", description = '/walk casual2'},
+        [9] =   {label = 'Casual3', value = "walk casual3", description = '/walk casual3'},
+        [10] =  {label = 'Casual4', value = "walk casual4", description = '/walk casual4'},
+        [11] =  {label = 'Casual5', value = "walk casual5", description = '/walk casual5'},
+        [12] =  {label = 'Casual6', value = "walk casual6", description = '/walk casual6'},
+        [13] =  {label = 'Chichi', value = "walk Chichi", description = '/walk Chichi'},
         [14] =  {label = 'Confident', value = "walk Confident", description = '/walk Confident'},
         [15] =  {label = 'Cop', value = "walk Cop", description = '/walk Cop'},
         [16] =  {label = 'Cop2', value = "walk Cop2", description = '/walk Cop2'},
@@ -215,7 +215,7 @@ menu4:On('open', function(m)
     }
 
     for k,v in ipairs(elements) do
-        local menu1_button1 = menu4:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
+        local menu_button2 = menu4:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
             local selection = btn.Value
             ExecuteCommand(selection.value)
         end})
