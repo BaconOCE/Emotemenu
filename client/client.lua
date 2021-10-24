@@ -16,9 +16,11 @@ local menu = MenuV:CreateMenu('MY CITY MENU', 'MY CITY MENU', 'topleft', 255, 0,
 local menu1 = MenuV:CreateMenu('MY CITY MENU', "Emotes Menu", 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Emotes Menu')
 local menu2 = MenuV:CreateMenu('MY CITY MENU', 'Dance Emotes', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Dance Emotes')
 local menu3 = MenuV:CreateMenu('MY CITY MENU', 'Prop Emotes', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Prop Emotes')
+local menu4 = MenuV:CreateMenu('MY CITY MENU', 'Walk Styles', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Walk Styles')
 
 -- PRINCIPAL MENU (MAIN MENU BUTTONS)
 local menu_button1 = menu:AddButton({ icon = '😃', label = 'Emotes Menu', value = menu1, description = 'Start a Dance Party' })
+local menu_button2 = menu:AddButton({ icon = '🚶‍♀️', label = 'Walk Menu', value = menu4, description = 'Walk' })
 
 -- MENU 1 (EMOTES MENU)
 local menu_button1 = menu1:AddButton({ icon = '🕺', label = 'Dance Emotes', value = menu2, description = 'Dance Emotes' })
@@ -138,6 +140,87 @@ menu3:On('open', function(m)
             end})
         end
     end)
+
+-- MENU 4 (Walk EMOTES)
+menu4:On('open', function(m)
+    m:ClearItems()
+    local elements = {
+        [1] =   {label = 'Reset Walk', value = "walk reset", description = '/walk reset'},
+        [2] =   {label = 'Injured', value = "walk injured", description = '/walk brave'},
+        [3] =   {label = 'Alien', value = "walk alien", description = '/walk brave'},
+        [4] =   {label = 'Armored', value = "walk armored", description = '/walk brave'},
+        [5] =   {label = 'Arrogant', value = "walk arrogant", description = '/walk brave'},
+        [6] =   {label = 'Brave', value = "walk brave", description = '/walk brave'},
+        [7] =   {label = 'Casual', value = "walk casual", description = '/walk brave'},
+        [8] =   {label = 'Casual2', value = "walk casual2", description = '/walk brave'},
+        [9] =   {label = 'Casual3', value = "walk casual3", description = '/walk brave'},
+        [10] =  {label = 'Casual4', value = "walk casual4", description = '/walk brave'},
+        [11] =  {label = 'Casual5', value = "walk casual5", description = '/walk brave'},
+        [12] =  {label = 'Casual6', value = "walk casual6", description = '/walk brave'},
+        [13] =  {label = 'Chichi', value = "walk Chichi", description = '/walk brave'},
+        [14] =  {label = 'Confident', value = "walk Confident", description = '/walk Confident'},
+        [15] =  {label = 'Cop', value = "walk Cop", description = '/walk Cop'},
+        [16] =  {label = 'Cop2', value = "walk Cop2", description = '/walk Cop2'},
+        [17] =  {label = 'Cop3', value = "walk Cop3", description = '/walk Cop3'},
+        [18] =  {label = 'Drunk', value = "walk Drunk", description = '/walk Drunk'},
+        [19] =  {label = 'Drunk2', value = "walk Drunk2", description = '/walk Drunk2'},
+        [20] =  {label = 'Drunk3', value = "walk Drunk3", description = '/walk Drunk3'},
+        [21] =  {label = 'Femme', value = "walk Femme", description = '/walk Femme'},
+        [22] =  {label = 'Fire', value = "walk Fire", description = '/walk Fire'},
+        [23] =  {label = 'Fire2', value = "walk Fire2", description = '/walk Fire2'},
+        [24] =  {label = 'Fire3', value = "walk Fire3", description = '/walk Fire3'},
+        [25] =  {label = 'Flee', value = "walk Flee", description = '/walk Flee'},
+        [26] =  {label = 'Franklin', value = "walk Franklin", description = '/walk Franklin'},
+        [27] =  {label = 'Gangster', value = "walk Gangster", description = '/walk Gangster'},
+        [28] =  {label = 'Gangster2', value = "walk Gangster2", description = '/walk Gangster2'},
+        [29] =  {label = 'Gangster3', value = "walk Gangster3", description = '/walk Gangster3'},
+        [30] =  {label = 'Gangster4', value = "walk Gangster4", description = '/walk Gangster4'},
+        [31] =  {label = 'Gangster5', value = "walk Gangster5", description = '/walk Gangster5'},
+        [32] =  {label = 'Grooving', value = "walk Grooving", description = '/walk Grooving'},
+        [33] =  {label = 'Guard', value = "walk Guard", description = '/walk Guard'},
+        [34] =  {label = 'Handcuffs', value = "walk Handcuffs", description = '/walk Handcuffs'},
+        [35] =  {label = 'Heels', value = "walk Heels", description = '/walk Heels'},
+        [36] =  {label = 'Heels2', value = "walk Heels2", description = '/walk Heels2'},
+        [37] =  {label = 'Hiking', value = "walk Hiking", description = '/walk Hiking'},
+        [38] =  {label = 'Hipster', value = "walk Hipster", description = '/walk Hipster'},
+        [39] =  {label = 'Hobo', value = "walk Hobo", description = '/walk Hobo'},
+        [40] =  {label = 'Hurry', value = "walk Hurry", description = '/walk Hurry'},
+        [41] =  {label = 'Janitor', value = "walk Janitor", description = '/walk Janitor'},
+        [42] =  {label = 'Janitor2', value = "walk Janitor2", description = '/walk Janitor2'},
+        [43] =  {label = 'Jog', value = "walk Jog", description = '/walk Jog'},
+        [44] =  {label = 'Lemar', value = "walk Lemar", description = '/walk Lemar'},
+        [45] =  {label = 'Lester', value = "walk Lester", description = '/walk Lester'},
+        [46] =  {label = 'Lester2', value = "walk Lester2", description = '/walk Lester2'},
+        [47] =  {label = 'Maneater', value = "walk Maneater", description = '/walk Maneater'},
+        [48] =  {label = 'Michael', value = "walk Michael", description = '/walk Michael'},
+        [49] =  {label = 'Money', value = "walk Money", description = '/walk Money'},
+        [50] =  {label = 'Muscle', value = "walk Muscle", description = '/walk Muscle'},
+        [51] =  {label = 'Posh', value = "walk Posh", description = '/walk Posh'},
+        [52] =  {label = 'Posh2', value = "walk Posh2", description = '/walk Posh2'},
+        [53] =  {label = 'Quick', value = "walk Quick", description = '/walk Quick'},
+        [54] =  {label = 'Runner', value = "walk Runner", description = '/walk Runner'},
+        [55] =  {label = 'Sassy', value = "walk Sassy", description = '/walk Sassy'},
+        [56] =  {label = 'Sassy2', value = "walk Sassy2", description = '/walk Sassy2'},
+        [54] =  {label = 'Scared', value = "walk Scared", description = '/walk Scared'},
+        [55] =  {label = 'Sexy', value = "walk Sexy", description = '/walk Sexy'},
+        [56] =  {label = 'Shady', value = "walk Shady", description = '/walk Shady'},
+        [57] =  {label = 'Swagger', value = "walk Swagger", description = '/walk Swagger'},
+        [58] =  {label = 'Tough', value = "walk Tough", description = '/walk Tough'},
+        [59] =  {label = 'Tough2', value = "walk Tough2", description = '/walk Tough2'},
+        [60] =  {label = 'Trash', value = "walk Trash", description = '/walk Trash'},
+        [61] =  {label = 'Trash2', value = "walk Trash2", description = '/walk Trash2'},
+        [62] =  {label = 'Trevor', value = "walk Trevor", description = '/walk Trevor'},
+        [63] =  {label = 'Wide', value = "walk Wide", description = '/walk Wide'},
+
+    }
+
+    for k,v in ipairs(elements) do
+        local menu1_button1 = menu4:AddButton({label = v.label,value = v,description = v.description,select = function(btn)
+            local selection = btn.Value
+            ExecuteCommand(selection.value)
+        end})
+    end
+end)
 
 RegisterNetEvent('Emotemenu:client:openMenu') --START OPEN MENU FUNCTION--
 AddEventHandler('Emotemenu:client:openMenu', function()
