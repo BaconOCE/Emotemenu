@@ -11,6 +11,14 @@
 -- ** YOU MUST HAVE DPEMOTES AND MENUV INSTALLED FOR THIS MENU TO WORK **
 -- **********************************************************************
 
+-- ************************************************************************************************
+-- ** UNDERSTANDING THE OPTIONS OF CREATING A MENU, PLEASE SEE THE EXAMPLE BELOW TO HELP YOU OUT **
+-- ******************************************************************************************************************************************
+-- **local menu = MenuV:CreateMenu('MENU HEADER', 'MENU SUB HEADER', 'POSITION', R, G, B, 'size-125', 'HEADER IMAGE', 'menuv', 'ALT TITLE')**
+-- ******************************************************************************************************************************************
+-- ** UNDERSTANDING THE OPTIONS OF CREATING A MENU, PLEASE SEE THE EXAMPLE ABOVE TO HELP YOU OUT **
+-- ************************************************************************************************
+
 -- CREATE MENU (MAIN MENU)
 local menu = MenuV:CreateMenu('MY CITY MENU', 'MY CITY MENU', 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Main Menu')
 local menu1 = MenuV:CreateMenu('MY CITY MENU', "Emotes Menu", 'topleft', 255, 0, 0, 'size-125', 'default', 'menuv', 'Emotes Menu')
